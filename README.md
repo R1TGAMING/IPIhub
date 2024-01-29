@@ -1,12 +1,10 @@
 
 ## IPIhub
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
+ THIS SCRIPT UNDER DEVELOPMENT!!!
+ 
+ >  IF YOU WANT TO TEST THIS SCRIPT
+ I GIVE YOU RAW FILE ONLY ON GAME CLICK MADNESS
+```css
+https://raw.githubusercontent.com/R1TGAMING/IPIhub/fc66d2f755b370f2d4ca3c7d51e3b8e83d482d95/main.lua
 ```
 
