@@ -1,4 +1,4 @@
-_G.IPIhubVersion = "v0.9.3"
+_G.IPIhubVersion = "v1.2.5"
 
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -53,6 +53,7 @@ end)
 
 UITextSizeConstraint.Parent = TextButton
 UITextSizeConstraint.MaxTextSize = 30
+
 
 
 --Tabs
@@ -244,28 +245,174 @@ local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
         end
     end)
 
+--Auto Buy Eggs
+local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+        Title = "Auto Buy Eggs",
+        Values = {"None", "Basic", "Lava", "Desert", "Ocean", "Winter", "Toxic", "Candy", "Forest", "Storm", "Blocky", "Space", "Dominus", "Infinity", "Future", "City", "Moon", "Fire"},
+        Multi = false,
+        Default = 1,
+    })
 
+    Dropdown:SetValue("None")
+
+    Dropdown:OnChanged(function(Value)
+        if Value == "None" then
+           print("None Clicked")
+           
+        elseif Value == "Basic" then
+        while Value == "Basic" do
+           Remote.EggService.Purchase:FireServer("basic")
+           wait()
+        end
+        
+        elseif Value == "Lava" then
+        while Value == "Lava" do
+           Remote.EggService.Purchase:FireServer("lava")
+           wait()
+        end
+        
+        elseif Value == "Desert" then
+        while Value == "Desert" do
+           Remote.EggService.Purchase:FireServer("desert")
+           wait()
+        end
+        
+        elseif Value == "Ocean" then
+        while Value == "Ocean" do
+           Remote.EggService.Purchase:FireServer("ocean")
+           wait()
+        end
+        
+        elseif Value == "Winter" then
+        while Value == "Winter" do
+           Remote.EggService.Purchase:FireServer("winter")
+           wait()
+        end
+        
+        elseif Value == "Toxic" then
+        while Value == "Toxic" do
+           Remote.EggService.Purchase:FireServer("toxic")
+           wait()
+        end
+        
+        elseif Value == "Candy" then
+        while Value == "Candy" do
+           Remote.EggService.Purchase:FireServer("candy")
+           wait()
+           end
+        
+        
+        elseif Value == "Forest" then
+        while Value == "Forest" do
+           Remote.EggService.Purchase:FireServer("forest")
+           wait()
+        end
+        
+        elseif Value == "Storm" then
+        while Value == "Storm" do
+           Remote.EggService.Purchase:FireServer("storm")
+           wait()
+           end
+        
+        
+        elseif Value == "Blocky" then
+        while Value == "Blocky" do
+           Remote.EggService.Purchase:FireServer("blocky")
+           wait()
+        end
+        
+        
+        elseif Value == "Space" then
+        while Value == "Space" do
+           Remote.EggService.Purchase:FireServer("space")
+           wait()
+        end
+        
+        elseif Value == "Dominus" then
+        while Value == "Dominus" do
+           Remote.EggService.Purchase:FireServer("dominus")
+           wait()
+        end
+        
+        elseif Value == "Infinity" then
+        while Value == "Infinity" do
+           Remote.EggService.Purchase:FireServer("infinity")
+           wait()
+        end
+        
+        elseif Value == "Future" then
+        while Value == "Future" do
+           Remote.EggService.Purchase:FireServer("future")
+           wait()
+        end
+        
+        elseif Value == "City" then
+        while Value == "City" do
+           Remote.EggService.Purchase:FireServer("city")
+           wait()
+           end
+         
+         elseif Value == "Moon" then
+         while Value == "Moon" do
+           Remote.EggService.Purchase:FireServer("moon")
+           wait()
+           end
+           
+         elseif Value == "Fire" then
+         while Value == "Fire" do
+           Remote.EggService.Purchase:FireServer("fire")
+           wait()
+           end
+           
+        else
+        Fluent:Notify({
+        Title = "Error",
+        Content = "Pls Try Again Or Contact Developer!!",
+        SubContent = "", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+        end
+    end)
+    
 
 
 
 --Misc Tabs
 
 --Walk Speed
---[[local Slider = Tabs.Misc:AddSlider("Slider", {
-        Title = "Slider",
-        Description = "This is a slider",
-        Default = 2,
+local Slider = Tabs.Misc:AddSlider("Slider", {
+        Title = "Walk Speed",
+        Description = "",
+        Default = 50,
         Min = 0,
-        Max = 5,
+        Max = 200,
         Rounding = 1,
         Callback = function(Value)
-            print("Slider was changed:", Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
         end
     })
 
     Slider:OnChanged(function(Value)
-        print("Slider changed:", Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end)
 
-    Slider:SetValue(3)
-]]--
+    
+
+--Jump Height
+--[[local Slider1 = Tabs.Misc:AddSlider("Slider1", {
+        Title = "Jump Height",
+        Description = "",
+        Default = 50,
+        Min = 0,
+        Max = 200,
+        Rounding = 1,
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        end
+    })
+
+    Slider1:OnChanged(function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end)
+--]]
+    
