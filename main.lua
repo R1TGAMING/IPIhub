@@ -1,4 +1,4 @@
-_G.IPIhubVersion = "v1.2.5"
+_G.IPIhubVersion = "v1.2.6"
 
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -246,7 +246,7 @@ local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
     end)
 
 --Auto Buy Eggs
-local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+--[[local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
         Title = "Auto Buy Eggs",
         Values = {"None", "Basic", "Lava", "Desert", "Ocean", "Winter", "Toxic", "Candy", "Forest", "Storm", "Blocky", "Space", "Dominus", "Infinity", "Future", "City", "Moon", "Fire"},
         Multi = false,
@@ -373,7 +373,7 @@ local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
     })
         end
     end)
-    
+ ]]--   
 
 
 
